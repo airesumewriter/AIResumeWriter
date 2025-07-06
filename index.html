@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Resume Writer</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@chatbotui/core@latest/dist/chatbotui.min.js" defer></script>
 </head>
+
 <body>
   <header>
     <h1>AI Resume Writer</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="articles.html">Articles</a>
-      <a href="#">Checklist</a>
-      <a href="#">Tools</a>
+      <a href="#checklist">Checklist</a>
+      <a href="#tools">Tools</a>
     </nav>
   </header>
 
@@ -23,18 +27,58 @@
       <p>Write better resumes. Land more interviews. All free, guided by AI.</p>
     </section>
 
-    <section class="summary-cards">
-      <h2>Featured Articles</h2>
-      <div class="card-grid">
-        <div class="card"><h3><a href="articles.html#ai-resume">How AI is Changing Resume Writing</a></h3><p>Discover how AI tools streamline and enhance your job applications.</p></div>
-        <div class="card"><h3><a href="articles.html#ats-tips">Top Tips to Beat the ATS</a></h3><p>Learn how to tailor your resume to pass ATS filters and get noticed.</p></div>
-        <div class="card"><h3><a href="articles.html#resume-mistakes">Common Resume Mistakes</a></h3><p>Avoid these errors that could cost you an interview.</p></div>
+    <section class="featured">
+      <h3>Featured Articles</h3>
+      <div class="card">
+        <a href="articles.html#ai-resume"><strong>How AI is Changing Resume Writing</strong></a>
+        <p>Discover how AI tools streamline and enhance your job applications.</p>
       </div>
+      <div class="card">
+        <a href="articles.html#beat-ats"><strong>Top Tips to Beat the ATS</strong></a>
+        <p>Learn how to tailor your resume to pass ATS filters and get noticed.</p>
+      </div>
+      <div class="card">
+        <a href="articles.html#resume-mistakes"><strong>Common Resume Mistakes</strong></a>
+        <p>Avoid these errors that could cost you an interview.</p>
+      </div>
+      <div class="card">
+        <a href="articles.html#ai-prompts"><strong>AI Resume Prompts that Work</strong></a>
+        <p>Use smart AI prompts to generate impactful resume content faster.</p>
+      </div>
+      <div class="card">
+        <a href="articles.html#future-jobs"><strong>Future-Proof Jobs in the Age of AI</strong></a>
+        <p>Explore career paths that will remain in-demand as automation grows.</p>
+      </div>
+    </section>
+
+    <section id="checklist">
+      <h3>Resume Checklist ✅</h3>
+      <p><a href="checklist.pdf" download>📥 Download the Smart Resume Checklist</a></p>
+    </section>
+
+    <section id="tools">
+      <h3>Free Resume Tools 🔧</h3>
+      <ul>
+        <li><a href="https://resumeworded.com" target="_blank">Resume Worded</a> – Get feedback and score your resume.</li>
+        <li><a href="https://jobscan.co" target="_blank">Jobscan</a> – Optimize for ATS systems.</li>
+        <li><a href="https://zety.com" target="_blank">Zety</a> – Resume builder with templates.</li>
+      </ul>
+    </section>
+
+    <section class="kenji-chat">
+      <div id="kenji-trigger">🤖 Need help? Ask Kenji!</div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 AIResumeWriter.com</p>
+    <p>&copy; 2025 AI Resume Writer. Built with 🤖 by Best Builder Buddy.</p>
   </footer>
+
+  <script>
+    document.getElementById('kenji-trigger').addEventListener('click', function () {
+      window.open("https://chatbase.co/chatbot-iframe/0n3OR_TmBfnFfKXUGd07Z", "kenjiWindow", "width=420,height=600");
+    });
+  </script>
 </body>
+
 </html>
