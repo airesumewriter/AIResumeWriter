@@ -7,7 +7,7 @@
   <title>AI Resume Writer</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/@chatbotui/core@latest/dist/chatbotui.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
 </head>
 
 <body>
@@ -19,6 +19,9 @@
       <a href="#checklist">Checklist</a>
       <a href="#tools">Tools</a>
     </nav>
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search articles or tools...">
+    </div>
   </header>
 
   <main>
@@ -65,8 +68,22 @@
       </ul>
     </section>
 
+    <section class="newsletter">
+      <h3>📬 Subscribe to Our AI Career Tips</h3>
+      <form action="#" method="post">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
     <section class="kenji-chat">
-      <div id="kenji-trigger">🤖 Need help? Ask Kenji!</div>
+      <iframe 
+        src="https://www.chatbase.co/chatbot-iframe/0n3OR_TmBfnFfKXUGd07Z"
+        title="Kenji Assistant"
+        width="360"
+        height="500"
+        style="border: none; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.2); position: fixed; bottom: 80px; right: 20px; z-index: 999;">
+      </iframe>
     </section>
   </main>
 
@@ -75,10 +92,38 @@
   </footer>
 
   <script>
-    document.getElementById('kenji-trigger').addEventListener('click', function () {
-      window.open("https://chatbase.co/chatbot-iframe/0n3OR_TmBfnFfKXUGd07Z", "kenjiWindow", "width=420,height=600");
+    ScrollReveal().reveal('.hero, .featured .card, #checklist, #tools, .newsletter', {
+      duration: 900,
+      origin: 'bottom',
+      distance: '40px',
+      easing: 'ease-in-out',
+      interval: 150
     });
   </script>
+
+<script>
+  // Simple search functionality
+  const searchInput = document.getElementById('search');
+
+  searchInput.addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+
+    // Target article and tool cards
+    const cards = document.querySelectorAll('.card');
+    const tools = document.querySelectorAll('#tools li');
+
+    cards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      card.style.display = text.includes(query) ? 'block' : 'none';
+    });
+
+    tools.forEach(tool => {
+      const text = tool.textContent.toLowerCase();
+      tool.style.display = text.includes(query) ? 'list-item' : 'none';
+    });
+  });
+</script>
+      
 </body>
 
 </html>
