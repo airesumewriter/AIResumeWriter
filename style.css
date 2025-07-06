@@ -1,58 +1,108 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
+  color: #222;
 }
 
 header {
   background-color: #007bff;
   color: white;
-  padding: 1em;
+  padding: 20px 0;
   text-align: center;
 }
 
-header nav {
-  margin-top: 0.5em;
+nav {
+  margin-top: 10px;
 }
 
 nav a {
-  margin: 0 1em;
   color: white;
   text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
 }
 
-main {
-  padding: 2em;
+nav a:hover {
+  text-decoration: underline;
 }
 
 .hero {
-  background: #e3f2fd;
-  padding: 2em;
-  border-radius: 8px;
+  padding: 40px;
+  background-color: #e7f3ff;
   text-align: center;
-  margin-bottom: 2em;
 }
 
-.summary-cards {
-  margin-top: 2em;
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
-.card-grid {
-  display: grid;
-  gap: 1em;
+main {
+  padding: 20px;
+}
+
+.featured {
+  padding: 20px 0;
+}
+
+.featured h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
 .card {
-  background: white;
-  padding: 1em;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.card a {
+  color: #4a148c;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.card p {
+  margin: 5px 0 0 0;
+}
+
+#checklist,
+#tools {
+  margin-top: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 footer {
-  background: #333;
-  color: white;
-  padding: 1em;
   text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background-color: #f0f0f0;
+  margin-top: 40px;
+}
+
+.kenji-chat {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#kenji-trigger {
+  background-color: #ffeb3b;
+  padding: 12px 20px;
+  display: inline-block;
+  font-weight: 600;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+#kenji-trigger:hover {
+  transform: scale(1.05);
 }
