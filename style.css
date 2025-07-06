@@ -26,6 +26,10 @@ header {
   color: white;
   padding: 20px 0;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav {
@@ -87,6 +91,11 @@ nav a {
   font-weight: bold;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#kenji-trigger:hover {
+  transform: scale(1.05);
 }
 
 /* Footer */
