@@ -1,11 +1,26 @@
+/* General Styles */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
-  color: #222;
+  background: #f5f5f5;
+  color: #333;
 }
 
+a {
+  text-decoration: none;
+  color: #1a0dab;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  margin: 0 0 10px;
+}
+
+/* Header */
 header {
   background-color: #007bff;
   color: white;
@@ -18,91 +33,67 @@ nav {
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
   margin: 0 15px;
+  color: white;
   font-weight: 600;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
+/* Hero Section */
 .hero {
-  padding: 40px;
-  background-color: #e7f3ff;
+  background: #e7f3ff;
   text-align: center;
+  padding: 40px 20px;
 }
 
 .hero h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
+  font-size: 24px;
 }
 
-main {
-  padding: 20px;
-}
-
+/* Featured Articles */
 .featured {
-  padding: 20px 0;
-}
-
-.featured h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
+  padding: 30px 20px;
 }
 
 .card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 15px;
-  margin-bottom: 15px;
+  background: white;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.card a {
-  color: #4a148c;
-  font-weight: bold;
-  text-decoration: underline;
+/* Checklist & Tools */
+#checklist, #tools {
+  padding: 30px 20px;
 }
 
-.card p {
-  margin: 5px 0 0 0;
+#tools ul {
+  list-style-type: disc;
+  padding-left: 20px;
 }
 
-#checklist,
-#tools {
-  margin-top: 30px;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  background-color: #f0f0f0;
-  margin-top: 40px;
-}
-
+/* Kenji Chat Section */
 .kenji-chat {
-  text-align: center;
-  margin-top: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
 
 #kenji-trigger {
-  background-color: #ffeb3b;
-  padding: 12px 20px;
-  display: inline-block;
-  font-weight: 600;
-  border-radius: 20px;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: transform 0.2s ease;
 }
 
-#kenji-trigger:hover {
-  transform: scale(1.05);
+/* Footer */
+footer {
+  text-align: center;
+  background: #222;
+  color: white;
+  padding: 15px 0;
+  margin-top: 30px;
 }
