@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f8fafc;
+  color: #333;
+  padding: 20px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100vh;
+  background-color: #1e3a8a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+#sidebarNav {
+  margin-top: 30px;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#sidebarNav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-collapsed {
+  display: none;
+}
+
+.nav-expanded {
+  display: flex !important;
+}
+
+.hero {
+  margin-left: 80px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.tools-section {
+  margin: 40px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.tool-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-4px);
+}
+
+.signup-section {
+  padding: 40px 80px;
+  text-align: center;
+}
+
+.articles-preview {
+  padding: 40px 80px;
+}
+
+.article-thumbs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.article-card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
